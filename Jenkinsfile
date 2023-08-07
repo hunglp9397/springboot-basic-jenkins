@@ -7,7 +7,7 @@ pipeline {
         stage('Build') {
             steps {
                  echo "Building"
-                 echo "My Name is %NAME%"
+                 echo "My Name is  $NAME"
             }
         }
         stage('Test') {

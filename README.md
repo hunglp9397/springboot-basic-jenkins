@@ -23,7 +23,7 @@
 ### 4. Cách thứ 2 để tích hợp Jenkins vào Gitub : Sử dụng Jenkinfile
 - Trong thư mục gốc của project, tạo file Jenkinsfile, cấu hình stages và link github
 - Ví dụ như sau:
-           
+           sdfsdf
    
 
       

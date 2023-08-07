@@ -21,9 +21,12 @@
 - **_Giải thích_**: Jenkins clone source code và đẩy vào thư mục _/var/jenkins_home/workspace/springboot-basic-jenkins_ trong jenkins containers
     + ![7.jpg](guide_img/7.jpg)
     +  ![8.jpg](guide_img/8.jpg)
-### 4. Cách thứ 2 để tích hợp Jenkins vào Gitub : Sử dụng Jenkinfile
+### 4. Tạo pipeline build : Sử dụng Jenkinfile
 - Trong thư mục gốc của project, tạo file Jenkinsfile, cấu hình stages và link github
-  
-   
-
+- Trên dashboard cu jenkins localhost:8080, Chọn newItem -> Pipeline
+- Cấu hình như sau:
+  +  ![10.jpg](guide_img/10.jpg)
+  + ![11.jpg](guide_img/11.jpg)
+- Sau đó Chọn pipeline vừa taoj -> Chọn BuildNow ( Bước đầu tiền cần phải thực hiện manual, Các bước sau pipeline sẽ tự động thực thi các step trong file JenkinsFile)
+  + ![13.jpg](guide_img/13.jpg)
       

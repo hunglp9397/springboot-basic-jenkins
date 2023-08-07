@@ -1,10 +1,20 @@
 pipeline {
-	agent any
-	stages {
-		stage('Clone'){
-			steps {
-				git 'https://github.com/hunglp9397/springboot-basic-jenkins.git'
-			}
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                //
+            }
         }
-	}
+        stage('Test') {
+            steps {
+                //
+            }
+        }
+        stage('Deploy') {
+            steps {
+                //
+            }
+        }
+    }
 }

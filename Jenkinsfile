@@ -1,12 +1,9 @@
 pipeline {
-    agent any
-
-    environment {
-        MAVEN_HOME = tool 'Maven'
-    }
-
-    tools {
-        maven 'Maven'
+    agent {
+        docker {
+            image 'maven:3.8.4-openjdk-11' // Use an image with Maven and Java 11
+            args '-v $HOME/.m2:/root/.m2' // Mount the Maven local repository
+        }
     }
 
     stages {
@@ -14,21 +11,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                script {
-                     def mvnCmd = tool name: 'Maven', type: 'hudson.tasks.Maven$MavenInstallation'
-                     sh "${mvnCmd}/bin/mvn clean install"
-                }
-            }
-        }
-
-
-
-        stage('Package') {
-            steps {
-                script {
-                    def mvnCmd = "${env.MAVEN_HOME}/bin/mvn"
-                    sh "${mvnCmd} package"
-                }
+                sh 'mvn clean install' // Build the Spring project using Maven
             }
         }
 

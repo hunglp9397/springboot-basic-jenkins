@@ -1,19 +1,39 @@
 pipeline {
-	agent any
+    agent any
 
-	environment {
-		mavenHome = tool 'jenkins-maven'
-	}
+    environment {
+        MAVEN_HOME = tool 'Maven'
+    }
 
-	tools {
-		jdk 'java-11'
-	}
+    stages {
 
-	stages {
-		stage('Build'){
-			steps {
-				bat "mvn clean install -DskipTests"
-			}
-		}
-	}
+
+        stage('Build') {
+            steps {
+                script {
+                    def mvnCmd = "${env.MAVEN_HOME}/bin/mvn"
+                    sh "${mvnCmd} clean install"
+                }
+            }
+        }
+
+
+
+        stage('Package') {
+            steps {
+                script {
+                    def mvnCmd = "${env.MAVEN_HOME}/bin/mvn"
+                    sh "${mvnCmd} package"
+                }
+            }
+        }
+
+
+    }
+
+    post {
+        always {
+            cleanWs()
+        }
+    }
 }

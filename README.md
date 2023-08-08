@@ -8,6 +8,7 @@
 - Sau đó lấy token để nhập vào  hệ thống
 - Cài đặt ngrok (App dùng để expose localhost jenkins ra một url khác trên internet để có thể truy cập được)
     + ![9.jpg](guide_img/9.jpg)
+    + Chạy lệnh sau để expose : ngrok http 8080
     + ![1.jpg](guide_img/1.jpg)
 ### 2. Tích hợp Jenkins vào Github
 - Tạo project trên github

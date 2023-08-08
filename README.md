@@ -33,4 +33,4 @@
 ### 5. Install plugin:
 - Trên dashboad, chọn Manage Jenkins -> Plugins  
 - Install plugins sau : Docker Pipeline, Docker
-sdf
+sdfsdf

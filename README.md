@@ -31,5 +31,5 @@
 - Sau đó Chọn pipeline vừa taoj -> Chọn BuildNow ( Bước đầu tiền cần phải thực hiện manual, Các bước sau pipeline sẽ tự động thực thi các step trong file JenkinsFile)
   + ![13.jpg](guide_img/13.jpg)
 ### 5. Install plugin:
-- Trên dashboad, chọn Manage Jenkins -> Plugins 
+- Trên dashboad, chọn Manage Jenkins -> Plugins  
 - Install plugins sau : Docker Pipeline, Docker

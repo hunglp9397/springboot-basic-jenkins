@@ -22,7 +22,10 @@ pipeline {
          stage('Docker Build') {
             agent any
               steps {
-              	def javaAppImage = docker.build("123497/springboot-basic-jenkins:latest")
+                script {
+                    def javaAppImage = docker.build("123497/springboot-basic-jenkins:latest")
+                }
+
               }
          }
 

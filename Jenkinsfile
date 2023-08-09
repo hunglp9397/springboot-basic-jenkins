@@ -9,12 +9,22 @@ pipeline {
     stages {
 
 
-        stage('Build') {
+        stage('Build Maven') {
             steps {
                echo "Building"
                sh 'mvn clean install'
+               archiveArtifacts artifacts: '**/target/*.jar', allowEmptyArchive: true
             }
         }
+
+         stage('Build Docker') {
+             steps{
+                sh 'docker build -t 123497/springboot-basic-jenkins'
+                }
+             }
+         }
+
+
 
     }
 

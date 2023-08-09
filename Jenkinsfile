@@ -22,7 +22,8 @@ pipeline {
          stage('Build Docker Image') {
              steps {
                  script {
-                     docker.build("123497/springboot-basic-jenkins:latest", '.')
+                    sh 'docker buidl -t 123497/springboot-basic-jenkins .'
+
                  }
              }
          }

@@ -19,13 +19,11 @@ pipeline {
 
 
 
-         stage('Build Docker Image') {
-             steps {
-                 script {
-                    sh 'docker buidl -t 123497/springboot-basic-jenkins .'
-
-                 }
-             }
+         stage('Docker Build') {
+            agent any
+              steps {
+              	sh 'docker build -t 123497/springboot-basic-jenkins:latest .'
+              }
          }
 
 

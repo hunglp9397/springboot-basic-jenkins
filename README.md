@@ -65,7 +65,7 @@
     +  ![8.jpg](guide_img/8.jpg)
 ### 5. Tạo pipeline build : Sử dụng Jenkinsfile
 - Trong thư mục gốc của project, tạo file Jenkinsfile, cấu hình stages và link github
-- Trên dashboard cu jenkins localhost:8083, Chọn newItem -> Pipeline
+- Trên dashboard cu jenkins localhost:8083, Chọn newItem -> Pipeline -> FreeStyle Project
 - Cấu hình như sau:
   +  ![10.jpg](guide_img/10.jpg)
   + ![11.jpg](guide_img/11.jpg)

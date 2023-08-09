@@ -80,3 +80,4 @@
    + ![15.jpg](guide_img/15.jpg)
 - Kết quả run pipeline:
   + ![16.jpg](guide_img/16.jpg)
+d

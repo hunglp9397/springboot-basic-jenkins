@@ -17,6 +17,8 @@ pipeline {
             }
         }
 
+
+
          stage('Build Docker') {
              steps{
                 sh 'docker build -t 123497/springboot-basic-jenkins'
@@ -26,7 +28,7 @@ pipeline {
 
 
 
-    }
+
 
 
 }

@@ -21,12 +21,12 @@ pipeline {
 
          stage('Build Docker') {
              steps{
-                   script{
-                        sh 'docker build -t 123497/springboot-basic-jenkins .'
-                   }
+                  script{
+                        docker.build("123497/springboot-basic-jenkins .", '.')
+                  }
                 }
-             }
          }
+
 
 
 

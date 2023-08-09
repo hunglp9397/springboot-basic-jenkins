@@ -22,7 +22,7 @@ pipeline {
          stage('Docker Build') {
             agent any
               steps {
-              	sh 'docker build -t 123497/springboot-basic-jenkins:latest .'
+              	docker.build(123497/springboot-basic-jenkins:latest, '.')
               }
          }
 

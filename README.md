@@ -76,7 +76,7 @@
 - Install plugins sau : Docker Pipeline, Docker
 ### 7. Kiểm tra pipeline:
 - Lưu ý : Lần đầu push code thì phải Build bằng tay ( _bấm vào Build Now_). Các lần sau mỗi khi push code lên sẽ tự động build
-- Tại thời điểm thực thi bước này, Đang demo là chỉ build project ở stage Build
+- Tại thời điểm thực thi bước này,Đang demo là chỉ build project ở stage Build
    + ![15.jpg](guide_img/15.jpg)
 - Kết quả run pipeline:
   + ![16.jpg](guide_img/16.jpg)

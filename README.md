@@ -37,7 +37,7 @@
           volumes:
             - D:\Workspace\docker-volume-data\jenkins-data:/var/jenkins_home
             - /var/run/docker.sock:/var/run/docker.sock
-- Build custom images jenkins bằng lệnh sau : _docker build -t custom-jenkins ._
+
 - Run container bằng lệnh sau : `docker-compose up`
 - Kết quả:
    + ![14.jpg](guide_img/14.jpg)
@@ -49,7 +49,7 @@
 ### 3. Expose localhost Jenkins
 - Cài đặt ngrok (App dùng để expose localhost jenkins ra một url khác trên internet để Github có thể truy cập được)
     + ![9.jpg](guide_img/9.jpg)
-    + Chạy lệnh sau để expose : ngrok http 8080
+    + Chạy lệnh sau để expose : ngrok http 8083
     + ![1.jpg](guide_img/1.jpg)
 ### 3. Tích hợp Jenkins vào Github
 - Tạo project trên github

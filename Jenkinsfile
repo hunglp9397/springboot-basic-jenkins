@@ -1,4 +1,10 @@
 pipeline {
+    environment {
+        registry = "123497/springboot-basic-jenkins"
+        registryCredential = 'dockerhub_id'
+        dockerImage = ''
+    }
+
     agent {
             docker {
                 image 'maven:3.8.4' // Use the Maven Docker image with the desired version
@@ -31,7 +37,8 @@ pipeline {
             agent any
               steps {
                 script {
-                    sh 'docker build -t 123497/springboot-basic-jenkins .'
+                        dockerImage = docker.build registry  + ":latest"
+
                 }
 
               }

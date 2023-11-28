@@ -84,3 +84,7 @@
 
 Lỗi fix mãi ko được :()
 ![16.jpg](guide_img/17.jpg)
+
+Jenkins password : ab92f1fe7b574e808a254e166766ee34
+username : hunglp9
+password : ab92f1fe7b574e808a254e166766ee34

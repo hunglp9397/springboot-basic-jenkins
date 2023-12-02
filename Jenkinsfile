@@ -1,16 +1,16 @@
 pipeline {
-//     environment {
+    environment {
 //         registry = "123497/springboot-basic-jenkins"
 //         registryCredential = 'dockerhub_id'
 //         dockerImage = ''
-//     }
+    }
 //
-//     agent {
+    agent {
 //             docker {
 //                 image 'maven:3.8.4' // Use the Maven Docker image with the desired version
 //                 args '-v /var/run/docker.sock:/var/run/docker.sock' // Mount Docker socket if needed
 //             }
-//         }
+        }
 
     stages {
 

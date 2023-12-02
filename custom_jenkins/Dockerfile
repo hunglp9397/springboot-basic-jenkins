@@ -8,5 +8,17 @@ RUN add-apt-repository \
    $(lsb_release -cs) \
    stable"
 RUN apt-get update  -qq \
-    && apt-get -y install docker-ce
+    && apt-get -y install docker-ce \
+
+RUN curl -L \
+  "https://github.com/docker/compose/releases/download/1.25.3/docker-compose-$(uname -s)-$(uname -m)" \
+  -o /usr/local/bin/docker-compose \
+  && chmod +x /usr/local/bin/docker-compose
+
+RUN curl -fsSL https://get.docker.com | sh
 RUN usermod -aG docker jenkins
+RUN usermod -aG root jenkins
+RUN chmod 777 /var/run/docker.sock
+RUN chown jenkins:docker /var/run/docker.sock
+RUN su - jenkins
+USER jenkins

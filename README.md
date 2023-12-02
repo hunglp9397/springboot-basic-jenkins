@@ -55,7 +55,7 @@
 - Tạo project trên github
 - Vào Phần settings -> webhook, Nhập url `https://5293-1-55-219-115.ngrok-free.app/github-webhook/`
 - ![3.jpg](guide_img/3.jpg)
-### 4. Tạo project trên Jenkins
+### 4. Tạo project trên Jenkins (nhớ chọn loại :pipeline)
 - ![4.jpg](guide_img/4.jpg)
 - ![6.jpg](guide_img/6.jpg)
 - Sau khi push code lên branch main thì jenkins bắt được events, và đây chính là event push:
@@ -73,7 +73,7 @@
   + ![13.jpg](guide_img/13.jpg)
 ### 6. Install plugin:
 - Trên dashboad, chọn Manage Jenkins -> Plugins  
-- Install plugins sau : Docker Pipeline, Docker
+- Install plugins sau : Docker Pipeline, Docker, Pipeline
 ### 7. Kiểm tra pipeline:
 - Lưu ý : Lần đầu push code thì phải Build bằng tay ( _bấm vào Build Now_). Các lần sau mỗi khi push code lên sẽ tự động build
 - Tại thời điểm thực thi bước này,Đang demo là chỉ build project ở stage Build
@@ -89,5 +89,3 @@ Jenkins password : ab92f1fe7b574e808a254e166766ee34
 username : hunglp9
 password : ab92f1fe7b574e808a254e166766ee34
 d88984dbb33e4b62a491a536751d71a3
-
-sdf

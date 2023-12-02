@@ -5,11 +5,20 @@ pipeline {
         TAG = "latest"
 //         dockerImage = ''
     }
-//
+
+
     agent {
             docker {
                 image 'maven:3.8.4' // Use the Maven Docker image with the desired version
                 args '-v /var/run/docker.sock:/var/run/docker.sock' // Mount Docker socket if needed
+            }
+        }
+
+    stages {
+            stage('Check Docker') {
+                steps {
+                    sh 'docker --version'
+                }
             }
         }
 

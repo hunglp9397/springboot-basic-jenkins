@@ -1,6 +1,6 @@
 pipeline {
     environment {
-//         registry = "123497/springboot-basic-jenkins"
+        registry = "123497/springboot-basic-jenkins"
 //         registryCredential = 'dockerhub_id'
 //         dockerImage = ''
     }

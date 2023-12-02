@@ -28,6 +28,16 @@ pipeline {
                         }
                     }
 
+         stage('Build') {
+                    steps {
+                        script {
+                            def mavenHome = tool 'Maven'
+                            def mavenCMD = "${mavenHome}/bin/mvn"
+                            sh "${mavenCMD} clean install"
+                        }
+                    }
+                }
+
 //         stage('Initialize'){
 //             steps {
 //                 script {

@@ -1,7 +1,7 @@
 pipeline {
     environment {
         registry = "123497/springboot-basic-jenkins"
-//         registryCredential = 'dockerhub_id'
+        IMAGE_NAME = "123497/springboot-basic-jenkins"
 //         dockerImage = ''
     }
 //
@@ -26,7 +26,7 @@ pipeline {
 
         stage('Build Maven') {
             steps {
-               echo "Building"
+               echo "Building maven"
                sh 'mvn clean install'
                archiveArtifacts artifacts: '**/target/*.jar', allowEmptyArchive: true
             }
@@ -34,12 +34,14 @@ pipeline {
 
 
 
-         stage('Docker Build') {
+         stage('Build Docker images') {
             agent any
               steps {
                 script {
-                        echo "Docker build"
-//                     dockerImage = docker.build registry  + ":latest"
+                       echo "Docker build"
+                       docker.withRegistry('https://registry.hub.docker.com') {
+                            def customImage = docker.build("${IMAGE_NAME}:${TAG}", ".")
+                       }
 
                 }
 

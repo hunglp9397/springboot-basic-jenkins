@@ -2,6 +2,7 @@ pipeline {
     environment {
         registry = "123497/springboot-basic-jenkins"
         IMAGE_NAME = "123497/springboot-basic-jenkins"
+        TAG = "latest"
 //         dockerImage = ''
     }
 //

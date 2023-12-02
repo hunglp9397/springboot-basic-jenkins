@@ -1,12 +1,12 @@
 pipeline {
-    agent any
+//     agent any
 
-//      agent {
-//         docker {
-//             image 'maven:3.8.4' // Use the Maven Docker image with the desired version
-//             args '-v /var/run/docker.sock:/var/run/docker.sock' // Mount Docker socket if needed
-//         }
-//     }
+     agent {
+        docker {
+            image 'maven:3.8.4' // Use the Maven Docker image with the desired version
+            args '-v /var/run/docker.sock:/var/run/docker.sock' // Mount Docker socket if needed
+        }
+    }
 
 
     environment {
@@ -28,15 +28,7 @@ pipeline {
                         }
                     }
 
-         stage('Build') {
-                    steps {
-                        script {
-                            def mavenHome = tool 'Maven'
-                            def mavenCMD = "${mavenHome}/bin/mvn"
-                            sh "${mavenCMD} clean install"
-                        }
-                    }
-                }
+
 
 //         stage('Initialize'){
 //             steps {

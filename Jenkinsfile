@@ -17,9 +17,9 @@ pipeline {
         stage('Initialize'){
             steps {
                 script {
-                       echo "Initialize"
-//                     def dockerHome = tool 'myDocker'
-//                     env.PATH = "${dockerHome}/bin:${env.PATH}"
+                    echo "Initialize"
+                    def dockerHome = tool 'myDocker'
+                    env.PATH = "${dockerHome}/bin:${env.PATH}"
                 }
             }
         }
@@ -27,8 +27,8 @@ pipeline {
         stage('Build Maven') {
             steps {
                echo "Building"
-//                sh 'mvn clean install'
-//                archiveArtifacts artifacts: '**/target/*.jar', allowEmptyArchive: true
+               sh 'mvn clean install'
+               archiveArtifacts artifacts: '**/target/*.jar', allowEmptyArchive: true
             }
         }
 
